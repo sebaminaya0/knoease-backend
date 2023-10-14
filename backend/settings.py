@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "authentication",
+    "knowledge_base",
 ]
 
 MIDDLEWARE = [
@@ -74,11 +76,16 @@ WSGI_APPLICATION = "backend.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'knoease',
+        'USER': 'knoease_user',
+        'PASSWORD': 'hkF2bzX@J9NbX-8gC*4PjcBCq',
+        'HOST': 'localhost',  # Set to your PostgreSQL server address if not local
+        'PORT': '',  # Leave as an empty string to use the default port
     }
 }
+
 
 
 # Password validation
